@@ -52,6 +52,7 @@ class HomeController extends Controller
                 'image' => $value->getImageHighResolutionUrl(),
                 'video' => $value->getVideoStandardResolutionUrl(),
                 'caption' => $value->getCaption(),
+                'like_count' => $value->getLikesCount(),
                 'comment' => $comment
             ]);
         }
