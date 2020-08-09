@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use Smochin\Instagram\Crawler;
 use Illuminate\Http\Request;
 
 
@@ -18,21 +17,47 @@ class HomeController extends Controller
     }
 
     public function pukatinganinsta(){
-        $crawler = new Crawler;
-        $media = $crawler->getMediaByUser('dinaspekerjaanumumkatingan');
 
-        return \json_encode($media);
+        $instagram = new \InstagramScraper\Instagram();
+        $nonPrivateAccountMedias = $instagram->getMedias('dinaspekerjaanumumkatingan');
+        // dd($nonPrivateAccountMedias);
+        return $this->toJSON($nonPrivateAccountMedias);
     }
 
     public function home(Request $request){
-        $crawler = new Crawler;
 
         if ($request->id == null) {
             return \json_encode('Tambahkan parameter ?id=(username ig) setelah url');
         }
         $id = $request->id;
-        $media = $crawler->getMediaByUser($id);
+        $instagram = new \InstagramScraper\Instagram();
+        $nonPrivateAccountMedias = $instagram->getMedias($id);
+        // dd($nonPrivateAccountMedias);
+        return $this->toJSON($nonPrivateAccountMedias);
+    }
 
-        return \json_encode($media);
+    public function toJSON($data){
+        $temp = [];
+        foreach ($data as $key => $value) {
+            $comment = [];
+            foreach ($value->getComments() as $key => $item) {
+                array_push($comment,[
+                    'owner' => $item->getOwner()->getUsername(),
+                    'text' => $item->getText()
+                ]);
+            }
+            array_push($temp,[
+                'link' => $value->getLink(),
+                'type' => $value->getType(),
+                'image' => $value->getImageHighResolutionUrl(),
+                'video' => $value->getVideoStandardResolutionUrl(),
+                'caption' => $value->getCaption(),
+                'comment' => $comment
+            ]);
+        }
+
+        // dd($temp);
+
+        return \json_encode($temp);
     }
 }

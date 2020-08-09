@@ -85,7 +85,6 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
-            'Smochin\\Instagram\\' => 18,
         ),
         'R' => 
         array (
@@ -124,6 +123,7 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
         ),
         'I' => 
         array (
+            'InstagramScraper\\' => 17,
             'Illuminate\\' => 11,
         ),
         'G' => 
@@ -300,10 +300,6 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Smochin\\Instagram\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src',
-        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -371,6 +367,10 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
+        ),
+        'InstagramScraper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper',
         ),
         'Illuminate\\' => 
         array (
@@ -459,6 +459,13 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
     );
 
     public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+        ),
         'M' => 
         array (
             'Mockery' => 
@@ -2357,6 +2364,30 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'InstagramScraper\\Endpoints' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Endpoints.php',
+        'InstagramScraper\\Exception\\InstagramAgeRestrictedException' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Exception/InstagramAgeRestrictedException.php',
+        'InstagramScraper\\Exception\\InstagramAuthException' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Exception/InstagramAuthException.php',
+        'InstagramScraper\\Exception\\InstagramException' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Exception/InstagramException.php',
+        'InstagramScraper\\Exception\\InstagramNotFoundException' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Exception/InstagramNotFoundException.php',
+        'InstagramScraper\\Instagram' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Instagram.php',
+        'InstagramScraper\\InstagramQueryId' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/InstagramQueryId.php',
+        'InstagramScraper\\Model\\AbstractModel' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/AbstractModel.php',
+        'InstagramScraper\\Model\\Account' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Account.php',
+        'InstagramScraper\\Model\\Activity' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Activity.php',
+        'InstagramScraper\\Model\\ActivityElement' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/ActivityElement.php',
+        'InstagramScraper\\Model\\CarouselMedia' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/CarouselMedia.php',
+        'InstagramScraper\\Model\\Comment' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Comment.php',
+        'InstagramScraper\\Model\\Highlight' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Highlight.php',
+        'InstagramScraper\\Model\\Like' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Like.php',
+        'InstagramScraper\\Model\\Location' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Location.php',
+        'InstagramScraper\\Model\\Media' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Media.php',
+        'InstagramScraper\\Model\\Story' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Story.php',
+        'InstagramScraper\\Model\\Tag' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/Tag.php',
+        'InstagramScraper\\Model\\UserStories' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Model/UserStories.php',
+        'InstagramScraper\\Traits\\ArrayLikeTrait' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Traits/ArrayLikeTrait.php',
+        'InstagramScraper\\Traits\\InitializerTrait' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/Traits/InitializerTrait.php',
+        'InstagramScraper\\TwoStepVerification\\ConsoleVerification' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/TwoStepVerification/ConsoleVerification.php',
+        'InstagramScraper\\TwoStepVerification\\TwoStepVerificationInterface' => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper/TwoStepVerification/TwoStepVerificationInterface.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
@@ -4003,20 +4034,6 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'Smochin\\Instagram\\Crawler' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Crawler.php',
-        'Smochin\\Instagram\\Factory\\LocationFactory' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Factory/LocationFactory.php',
-        'Smochin\\Instagram\\Factory\\MediaFactory' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Factory/MediaFactory.php',
-        'Smochin\\Instagram\\Factory\\TagFactory' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Factory/TagFactory.php',
-        'Smochin\\Instagram\\Factory\\UserFactory' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Factory/UserFactory.php',
-        'Smochin\\Instagram\\Model\\Coordinate' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Coordinate.php',
-        'Smochin\\Instagram\\Model\\Dimension' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Dimension.php',
-        'Smochin\\Instagram\\Model\\Location' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Location.php',
-        'Smochin\\Instagram\\Model\\Media' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Media.php',
-        'Smochin\\Instagram\\Model\\Photo' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Photo.php',
-        'Smochin\\Instagram\\Model\\Profile' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Profile.php',
-        'Smochin\\Instagram\\Model\\Tag' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Tag.php',
-        'Smochin\\Instagram\\Model\\User' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/User.php',
-        'Smochin\\Instagram\\Model\\Video' => __DIR__ . '/..' . '/smochin/instagram-php-crawler/src/Model/Video.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
@@ -4742,6 +4759,11 @@ class ComposerStaticInitb59a3c56cf81ca63fe4d6d0333880bfa
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'Unirest\\Exception' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Exception.php',
+        'Unirest\\Method' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Method.php',
+        'Unirest\\Request' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request.php',
+        'Unirest\\Request\\Body' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request/Body.php',
+        'Unirest\\Response' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Response.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',

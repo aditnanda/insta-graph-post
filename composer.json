@@ -14,7 +14,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "smochin/instagram-php-crawler": "^1.0"
+        "raiym/instagram-php-scraper": "^0.9.12"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
