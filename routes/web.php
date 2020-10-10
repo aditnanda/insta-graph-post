@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 $router->get('/pukatinganinsta', 'HomeController@pukatinganinsta');
 $router->get('/', 'HomeController@home');
+$router->get('/url', 'HomeController@mediaUrl');
 

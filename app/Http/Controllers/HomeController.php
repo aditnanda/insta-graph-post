@@ -36,6 +36,26 @@ class HomeController extends Controller
         return $this->toJSON($nonPrivateAccountMedias);
     }
 
+    public function mediaUrl(Request $request){
+
+        if ($request->url == null) {
+            return \json_encode('Isikan url, misal https://www.instagram.com/p/B9i4wlfpPoK/');
+        }
+        $instagram = new \InstagramScraper\Instagram();
+        $nonPrivateAccountMedias = $instagram->getMediaByUrl($request->url);
+        // dd($nonPrivateAccountMedias);
+        $temp = [
+            'link' => $nonPrivateAccountMedias->getLink(),
+            'type' => $nonPrivateAccountMedias->getType(),
+            'image' => $nonPrivateAccountMedias->getImageHighResolutionUrl(),
+            'video' => $nonPrivateAccountMedias->getVideoStandardResolutionUrl(),
+            'caption' => $nonPrivateAccountMedias->getCaption(),
+            'like_count' => $nonPrivateAccountMedias->getLikesCount(),
+            'comment_count' => $nonPrivateAccountMedias->getCommentsCount(),
+        ];
+        return \json_encode($temp);
+    }
+
     public function toJSON($data){
         $temp = [];
         foreach ($data as $key => $value) {
@@ -53,6 +73,7 @@ class HomeController extends Controller
                 'video' => $value->getVideoStandardResolutionUrl(),
                 'caption' => $value->getCaption(),
                 'like_count' => $value->getLikesCount(),
+                'comment_count' => $value->getCommentsCount(),
                 'comment' => $comment
             ]);
         }
